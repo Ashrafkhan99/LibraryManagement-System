@@ -45,6 +45,7 @@ public class Patron {
     public void removeFromBorrowingHistory(Book book) {
         borrowingHistory.remove(book);
     }
+
     @Override
     public String toString() {
         return "Patron{" +

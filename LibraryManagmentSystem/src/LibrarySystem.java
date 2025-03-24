@@ -83,54 +83,63 @@ public class LibrarySystem {
     public void notifyPatron(int bookId, int branchId) {
         lendingManager.notifyPatron(bookId, branchId);
     }
-    public List<Patron> getAllPatrons(){
+
+    public List<Patron> getAllPatrons() {
         return patronManager.getAllPatron();
     }
-    public List<Branch> getAllBranches(){
+
+    public List<Branch> getAllBranches() {
         return branches;
     }
-    public List<Book> getAllBooks(int branchId){
+
+    public List<Book> getAllBooks(int branchId) {
         Branch branch = getBranchById(branchId);
-        if (branch != null){
+        if (branch != null) {
             return branch.getAllBooks();
         }
         return null;
     }
-    public void addBook(Book book, int branchId){
+
+    public void addBook(Book book, int branchId) {
         Branch branch = getBranchById(branchId);
-        if (branch != null){
+        if (branch != null) {
             branch.addBook(book);
         }
     }
-    public void removeBook(int bookId, int branchId){
+
+    public void removeBook(int bookId, int branchId) {
         Branch branch = getBranchById(branchId);
-        if (branch != null){
+        if (branch != null) {
             branch.removeBook(bookId);
         }
     }
-    public void updateBook(Book book, int branchId){
+
+    public void updateBook(Book book, int branchId) {
         Branch branch = getBranchById(branchId);
-        if (branch != null){
+        if (branch != null) {
             branch.updateBook(book);
         }
     }
-    public List<Book> searchBookByTitle(String title, int branchId){
+
+    public List<Book> searchBookByTitle(String title, int branchId) {
         Branch branch = getBranchById(branchId);
-        if (branch != null){
+        if (branch != null) {
             return branch.findBookByTitle(title);
         }
         return null;
     }
-    public List<Book> searchBookByAuthor(String author, int branchId){
+
+    public List<Book> searchBookByAuthor(String author, int branchId) {
         Branch branch = getBranchById(branchId);
-        if (branch != null){
+        if (branch != null) {
             return branch.findBookByAuthor(author);
         }
         return null;
     }
-    public Book searchBookByISBN(String isbn, int branchId){
+
+    public Book searchBookByISBN(String isbn, int branchId) {
         Branch branch = getBranchById(branchId);
-        if (branch != null){
+        if (branch != null) {
             return branch.findBookByISBN(isbn);
         }
         return null;

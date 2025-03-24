@@ -33,6 +33,7 @@ public class Book {
     public int getPublicationYear() {
         return publicationYear;
     }
+
     public int getBookId() {
         return bookId;
     }
@@ -52,6 +53,7 @@ public class Book {
     public void setAvailable(boolean available) {
         isAvailable = available;
     }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -61,6 +63,7 @@ public class Book {
                 ", publicationYear=" + publicationYear +
                 ", bookId=" + bookId +
                 ", isAvailable=" + isAvailable +
+                ", quantity=" + quantity +
                 '}';
     }
 }
