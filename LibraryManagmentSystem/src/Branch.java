@@ -28,27 +28,35 @@ public class Branch {
     public InventoryManager getInventoryManager() {
         return inventoryManager;
     }
-    public List<Book> getAllBooks(){
+
+    public List<Book> getAllBooks() {
         return inventoryManager.getAllBooks();
     }
-    public void addBook(Book book){
+
+    public void addBook(Book book) {
         inventoryManager.addBook(book);
     }
-    public void removeBook(int bookId){
+
+    public void removeBook(int bookId) {
         inventoryManager.removeBook(bookId);
     }
-    public void updateBook(Book book){
+
+    public void updateBook(Book book) {
         inventoryManager.updateBook(book);
     }
-    public List<Book> findBookByTitle(String title){
+
+    public List<Book> findBookByTitle(String title) {
         return inventoryManager.findBookByTitle(title);
     }
-    public List<Book> findBookByAuthor(String author){
+
+    public List<Book> findBookByAuthor(String author) {
         return inventoryManager.findBookByAuthor(author);
     }
-    public Book findBookByISBN(String isbn){
+
+    public Book findBookByISBN(String isbn) {
         return inventoryManager.findBookByISBN(isbn);
     }
+
     @Override
     public String toString() {
         return "Branch{" +
